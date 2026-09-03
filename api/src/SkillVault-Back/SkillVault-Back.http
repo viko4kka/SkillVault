@@ -1,0 +1,6 @@
+@SkillVault_Back_HostAddress = http://localhost:5098
+
+GET {{SkillVault_Back_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

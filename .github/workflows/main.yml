@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout kodu
+        uses: actions/checkout@v4
+
+      - name: Instalacja .NET 9
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore
+        run: dotnet restore api/SkillVault.sln
+
+      - name: Build
+        run: dotnet build api/SkillVault.sln --no-restore --configuration Release
+
+      - name: Test
+        run: dotnet test api/SkillVault.sln --no-build --configuration Release --verbosity normal
