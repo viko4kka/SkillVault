@@ -1,4 +1,3 @@
-@"
 # Visual Studio cache
 .vs/
 
@@ -8,4 +7,3 @@ obj/
 
 # User-specific files
 *.user
-"@ | Out-File -FilePath ".gitignore" -Encoding utf8

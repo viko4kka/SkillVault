@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\SkillVault-Back\SkillVault-Back.csproj" />
+    <ProjectReference Include="..\..\src\SkillVault-Back\SkillVault-Back.csproj" />
   </ItemGroup>
 
   <ItemGroup>
